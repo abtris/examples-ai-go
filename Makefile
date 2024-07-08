@@ -26,3 +26,6 @@ example1: ## Run simple ollama example
 
 example1-stream: ## Run simple ollama example streaming
 	go run examples/ollama-single-prompt-streaming/main.go
+
+example-embeddings: ## Run ollama embeddings example
+	go run examples/ollama-embeddings/main.go
