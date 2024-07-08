@@ -8,7 +8,7 @@ help:  ## Display this help
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
 chroma:  ## Run chrome vector store
-	docker run -p 8000:8000 chromadb/chroma
+	docker run -p 8000:8000 ghcr.io/chroma-core/chroma:0.5.0
 
 ollama-pull:
 	ollama pull mxbai-embed-large
