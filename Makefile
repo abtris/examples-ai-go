@@ -17,3 +17,5 @@ ollama-pull:
 chroma-example: ## Run example chrome
 	go run vectorstores/chroma/main.go
 
+pgvector-example: ## Run example pgvector
+	go run vectorstores/pgvector/main.go
