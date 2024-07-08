@@ -7,7 +7,6 @@ import (
 	"os"
 	"strings"
 
-	"github.com/google/uuid"
 	"github.com/tmc/langchaingo/embeddings"
 	"github.com/tmc/langchaingo/llms/ollama"
 	"github.com/tmc/langchaingo/schema"
@@ -16,7 +15,7 @@ import (
 )
 
 func main() {
-	ollamaLLM, err := ollama.New(ollama.WithModel("llama2"))
+	ollamaLLM, err := ollama.New(ollama.WithModel("llama3"))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -30,7 +29,7 @@ func main() {
 		chroma.WithChromaURL(os.Getenv("CHROMA_URL")),
 		chroma.WithEmbedder(ollamaEmbeder),
 		chroma.WithDistanceFunction("cosine"),
-		chroma.WithNameSpace(uuid.New().String()),
+		chroma.WithNameSpace("example1"),
 	)
 	if errNs != nil {
 		log.Fatalf("new: %v\n", errNs)
