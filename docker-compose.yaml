@@ -1,0 +1,12 @@
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma
+    privileged: true
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    volumes:
+      - chroma-data:/chroma/chroma
+volumes:
+  chroma-data: {}
