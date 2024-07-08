@@ -19,3 +19,10 @@ chroma-example: ## Run example chrome
 
 pgvector-example: ## Run example pgvector
 	go run vectorstores/pgvector/main.go
+
+
+example1: ## Run simple ollama example
+	go run examples/ollama-single-prompt/main.go
+
+example1-stream: ## Run simple ollama example streaming
+	go run examples/ollama-single-prompt-streaming/main.go
