@@ -1,4 +1,4 @@
-module examples-ai-go
+module github.com/abtris/examples-ai-go
 
 go 1.22.5
 

@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"log"
 
+	examples "github.com/abtris/examples-ai-go/vectorstores"
+
 	"github.com/tmc/langchaingo/llms/ollama"
-	"github.com/tmc/langchaingo/schema"
 	"github.com/tmc/langchaingo/vectorstores/pgvector"
 
 	"github.com/tmc/langchaingo/embeddings"
@@ -36,57 +37,7 @@ func main() {
 	}
 
 	// Add documents to the pgvector store.
-	_, err = store.AddDocuments(context.Background(), []schema.Document{
-		{
-			PageContent: "Tokyo",
-			Metadata: map[string]any{
-				"population": 38,
-				"area":       2190,
-			},
-		},
-		{
-			PageContent: "Paris",
-			Metadata: map[string]any{
-				"population": 11,
-				"area":       105,
-			},
-		},
-		{
-			PageContent: "London",
-			Metadata: map[string]any{
-				"population": 9.5,
-				"area":       1572,
-			},
-		},
-		{
-			PageContent: "Santiago",
-			Metadata: map[string]any{
-				"population": 6.9,
-				"area":       641,
-			},
-		},
-		{
-			PageContent: "Buenos Aires",
-			Metadata: map[string]any{
-				"population": 15.5,
-				"area":       203,
-			},
-		},
-		{
-			PageContent: "Rio de Janeiro",
-			Metadata: map[string]any{
-				"population": 13.7,
-				"area":       1200,
-			},
-		},
-		{
-			PageContent: "Sao Paulo",
-			Metadata: map[string]any{
-				"population": 22.6,
-				"area":       1523,
-			},
-		},
-	})
+	_, err = store.AddDocuments(context.Background(), examples.GetData())
 	if err != nil {
 		log.Fatal(err)
 	}
