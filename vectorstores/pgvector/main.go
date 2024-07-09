@@ -43,21 +43,29 @@ func main() {
 	}
 
 	// Search for similar documents.
-	docs, err := store.SimilaritySearch(ctx, "japan", 1)
+	docs, err := store.SimilaritySearch(ctx, "Which of these are cities are located in Japan?", 5, vectorstores.WithScoreThreshold(0.80))
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(docs)
 
 	// Search for similar documents using score threshold.
-	docs, err = store.SimilaritySearch(ctx, "only cities in south america", 10, vectorstores.WithScoreThreshold(0.80))
+	docs, err = store.SimilaritySearch(ctx, "Which of these are cities are located in South America?", 1, vectorstores.WithScoreThreshold(0.80))
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(docs)
 
 	// Search for similar documents using score threshold and metadata filter.
 	// Metadata filter for pgvector only supports key-value pairs for now.
-	filter := map[string]any{"area": "1523"} // Sao Paulo
+	filter := map[string]any{"area": "1523", "population": "22.6"}
 
-	docs, err = store.SimilaritySearch(ctx, "only cities in south america",
-		10,
-		vectorstores.WithScoreThreshold(0.80),
+	docs, err = store.SimilaritySearch(ctx, "Which of these are cities are located in South America?",
+		100,
 		vectorstores.WithFilters(filter),
 	)
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(docs)
 }
