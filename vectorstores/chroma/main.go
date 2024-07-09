@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"os"
 	"strings"
 
 	"github.com/tmc/langchaingo/embeddings"
@@ -26,7 +25,7 @@ func main() {
 
 	// Create a new Chroma vector store.
 	store, errNs := chroma.New(
-		chroma.WithChromaURL(os.Getenv("CHROMA_URL")),
+		chroma.WithChromaURL("http://localhost:8000"),
 		chroma.WithEmbedder(ollamaEmbeder),
 		chroma.WithDistanceFunction("cosine"),
 		chroma.WithNameSpace("example1"),

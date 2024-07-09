@@ -17,9 +17,37 @@ brew services start ollama
 ollama list
 ```
 
+## Vector stores backend
+
+All run by docker-compose
+
+```bash
+docker-compose up or podman compose up
+```
 
 
 ## Examples
+
+Use makefile to run it.
+
+```
+make
+```
+### Chroma
+
+```bash
+make chroma-example
+go run vectorstores/chroma/main.go
+Results:
+1. case: Up to 5 Cities in Japan
+    result:
+2. case: A City in South America
+    result:
+3. case: Large Cities in South America
+    result: Rio de Janeiro, Sao Paulo
+```
+
+- not work as expected, the query is not returning the expected results.
 
 ### PGVector
 
