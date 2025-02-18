@@ -2,7 +2,7 @@ module github.com/abtris/examples-ai-go
 
 go 1.22.5
 
-require github.com/tmc/langchaingo v0.1.12
+require github.com/tmc/langchaingo v0.1.13
 
 require (
 	github.com/Masterminds/semver v1.5.0 // indirect
@@ -15,7 +15,7 @@ require (
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/pgvector/pgvector-go v0.1.1 // indirect
 	github.com/pkoukk/tiktoken-go v0.1.6 // indirect
-	golang.org/x/crypto v0.23.0 // indirect
+	golang.org/x/crypto v0.29.0 // indirect
 	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1 // indirect
-	golang.org/x/text v0.15.0 // indirect
+	golang.org/x/text v0.20.0 // indirect
 )
