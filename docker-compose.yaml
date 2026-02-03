@@ -34,7 +34,7 @@ services:
     networks:
       - net
   es:
-    image: elasticsearch:8.17.3
+    image: elasticsearch:8.19.11
     volumes:
       - esdata01:/usr/share/elasticsearch/data
     ports:
