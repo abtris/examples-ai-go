@@ -17,7 +17,7 @@ services:
     networks:
       - net
   chromadb:
-    image: ghcr.io/chroma-core/chroma:0.6.3
+    image: ghcr.io/chroma-core/chroma:1.5.1
     volumes:
       # Be aware that indexed data are located in "/chroma/chroma/"
       # Default configuration for persist_directory in chromadb/config.py
