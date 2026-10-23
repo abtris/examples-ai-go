@@ -19,6 +19,13 @@
       "enabled": true
     },
     {
+      "description": "A major bump renames an indirect module to /vN, but its parents still import the old path, so the build breaks",
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
       "description": "langchaingo imports chroma-go packages removed after v0.1.x, so bumping it breaks the build",
       "matchManagers": ["gomod"],
       "matchPackageNames": ["github.com/amikos-tech/chroma-go"],
