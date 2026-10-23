@@ -9,7 +9,7 @@ require github.com/tmc/langchaingo v0.1.15
 require (
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/amikos-tech/chroma-go v0.1.4 // indirect
-	github.com/dlclark/regexp2 v1.12.0 // indirect
+	github.com/dlclark/regexp2 v1.10.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761 // indirect
