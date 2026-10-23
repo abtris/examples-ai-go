@@ -34,7 +34,7 @@ services:
     networks:
       - net
   es:
-    image: elasticsearch:9.4.4@sha256:ab8f40dd7a767f130d691feffbdc8c7f8502cd7a407eadd0924c028d2794b8cd
+    image: elasticsearch:9.5.5@sha256:da9e6fed4949f114c526cf51f5130fed9e30fe9f03a2ea7bf64ccbdc129fca8c
     volumes:
       - esdata01:/usr/share/elasticsearch/data
     ports:
