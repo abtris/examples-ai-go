@@ -17,7 +17,7 @@ services:
     networks:
       - net
   chromadb:
-    image: ghcr.io/chroma-core/chroma:1.5.9
+    image: ghcr.io/chroma-core/chroma:1.5.9@sha256:1e0b73a187a28757c572acba508c46f48c9e8b0acaf5c20e6d95cdedce1acdf6
     volumes:
       # Be aware that indexed data are located in "/chroma/chroma/"
       # Default configuration for persist_directory in chromadb/config.py
@@ -34,7 +34,7 @@ services:
     networks:
       - net
   es:
-    image: elasticsearch:9.4.4
+    image: elasticsearch:9.4.4@sha256:ab8f40dd7a767f130d691feffbdc8c7f8502cd7a407eadd0924c028d2794b8cd
     volumes:
       - esdata01:/usr/share/elasticsearch/data
     ports:
