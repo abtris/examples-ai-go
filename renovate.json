@@ -19,6 +19,12 @@
       "enabled": true
     },
     {
+      "description": "langchaingo imports chroma-go packages removed after v0.1.x, so bumping it breaks the build",
+      "matchManagers": ["gomod"],
+      "matchPackageNames": ["github.com/amikos-tech/chroma-go"],
+      "enabled": false
+    },
+    {
       "description": "Group compatible Go dependency updates to reduce overlapping PRs",
       "matchManagers": ["gomod"],
       "matchDepTypes": ["require", "indirect"],
