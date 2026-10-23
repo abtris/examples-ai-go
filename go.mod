@@ -2,7 +2,7 @@ module github.com/abtris/examples-ai-go
 
 go 1.25.0
 
-require github.com/tmc/langchaingo v0.1.14
+require github.com/tmc/langchaingo v0.1.15
 
 require (
 	github.com/Masterminds/semver v1.5.0 // indirect
