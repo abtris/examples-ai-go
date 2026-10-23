@@ -2,6 +2,8 @@ module github.com/abtris/examples-ai-go
 
 go 1.25.0
 
+toolchain go1.27.3
+
 require github.com/tmc/langchaingo v0.1.14
 
 require (
@@ -17,5 +19,5 @@ require (
 	github.com/pkoukk/tiktoken-go v0.1.6 // indirect
 	golang.org/x/crypto v0.52.0 // indirect
 	golang.org/x/sys v0.45.0 // indirect
-	golang.org/x/text v0.37.0 // indirect
+	golang.org/x/text v0.41.0 // indirect
 )
