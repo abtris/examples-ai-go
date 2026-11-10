@@ -18,6 +18,6 @@ require (
 	github.com/pgvector/pgvector-go v0.4.1 // indirect
 	github.com/pkoukk/tiktoken-go v0.1.8 // indirect
 	golang.org/x/crypto v0.58.0 // indirect
-	golang.org/x/sys v0.49.0 // indirect
-	golang.org/x/text v0.43.0 // indirect
+	golang.org/x/sys v0.50.0 // indirect
+	golang.org/x/text v0.44.0 // indirect
 )
