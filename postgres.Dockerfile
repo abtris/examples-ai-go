@@ -1,4 +1,4 @@
-FROM postgres:18@sha256:64c8b0d31e4ab6ea665e8426ea406a94bf52de3c05b3a4a8bf713704eefa9328
+FROM postgres:19@sha256:4ea94de574c17f0372722806c949757050fbb1cd7648410fe45d6bba275cc00e
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends postgresql-16-pgvector && \
